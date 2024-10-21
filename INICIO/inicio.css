@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.body{
+    background-color: rgb(201, 201, 201);
+}
+.titulo-principal{
+    font-size: 250%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-top: 2%;
+}
+.topnav{
+    background-color: rgb(3, 21, 59);
+    overflow: hidden;
+}/*estilos de links dentro de la barra navegacion*/
+.topnav a{
+    float: left;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+/* cambio de color de los enlaces al pasar el raton encima de ellos*/
+.topnav a:hover{
+    background-color: blue;
+    color: black;
+}
+/* agregar un color al enlace activo/ actual*/
+.topnav a.active{
+    background-color: darkgrey;
+    color: white;
+}
+.header{
+    background-color: rgb(241, 218, 142);
+}
+.logo-biblioteca{
+    float: left;
+    margin-left: 12%;
+    margin-top: 2%;
+
+}
+.logo-ayuntamiento{
+    float: right;
+    margin-right: 12%;
+    margin-top: 2%;
+}
