@@ -45,7 +45,7 @@ body{
 }
 /* cambio de color de los enlaces al pasar el raton encima de ellos*/
 .topnav a:hover{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(159, 159, 159);
     color: black;
     transition: color 0.3s, border-color 0.3s; 
 }
@@ -160,7 +160,7 @@ footer a{
     padding: 1%;
 }
 footer a:hover{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(159, 159, 159);
     color: black;
     border-radius: 1%;
     padding: 1%;
