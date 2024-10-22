@@ -56,16 +56,17 @@ body{
 }
 
 .logo-biblioteca{
-    width: 100px;
+    width: 140px;
     height: auto;
     margin: 0 60px;
+    max-width: fit-content;
 }
 .logo-ayuntamiento{
     width: 100px;
     height: auto;
     margin: 0 60px;
     border-radius: 4%;
-
+    max-width: fit-content;
 }
 .img{
     border-radius: 5%;
