@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Fuente.2';
+    src: url('fonts/Notably Absent DEMO.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Fuente';
+    src: url('fonts/MADE TOMMY Regular_PERSONAL USE.otf') format('truetype'); 
+}
+body{
+    background-color: rgb(255, 213, 136);
+    
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(201, 201, 201);
+    padding: 20px;
+}
+.titulo-principal{
+    font-size: 55px;
+    font-family: 'Fuente', sans-serif;
+    text-align: center;
+    padding-top: 2%;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
+
+.topnav{
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}/*estilos de links dentro de la barra navegacion*/
+.topnav a{
+    float: left;
+    color: aliceblue;
+    text-align: center;
+    padding: 16px 38px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 1%;
+    font-family: "Fuente.2", sans-serif;
+}
+/* cambio de color de los enlaces al pasar el raton encima de ellos*/
+.topnav a:hover{
+    background-color: rgb(159, 159, 159);
+    color: black;
+    transition: color 0.3s, border-color 0.3s; 
+}
+/* agregar un color al enlace activo/ actual*/
+.topnav a.active{
+    background-color: darkgrey;
+    color: white;
+}
+
+.logo-biblioteca{
+    width: 140px;
+    height: auto;
+    margin: 0 60px;
+    max-width: fit-content;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
+.logo-ayuntamiento{
+    width: 100px;
+    height: auto;
+    margin: 0 60px;
+    border-radius: 4%;
+    max-width: fit-content;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
+.img{
+    border-radius: 5%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.textofoto{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    font-family: "Fuente", sans-serif;
+    background-color: rgb(0, 0, 0, .7);
+    padding: 16px;
+    text-align: center;
+    border-radius: 1%;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
+
+.titulo-articulo{
+    border: 5px solid rgb(0, 0, 0);
+    background-color: lightcoral;
+    text-align: center;
+    font-size: 26px;
+    width: 80%;  
+    font-family: "Fuente", sans-serif;
+    margin: auto; 
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.titulo-articulo h2{
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
+.descripcion-articulo{
+    width: 80%;  
+    margin: auto; 
+    font-family: "Fuente", sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+table {
+    font-family: "fuente.4", sans-serif;
+    border-collapse: collapse;
+    width: 100%;  
+    margin: auto; 
+    background-color: #f0f0f0;
+    padding: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  td, th {
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 8px;
+  }
+  
+th{
+    background-color: rgb(201, 201, 201);
+}
+.imagenes{
+    width: 20%;  
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+.flecha-arriba{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )/* SOMBRA EN PNG*/
+    
+}
+footer {
+    bottom: 0;       
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+footer a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: "Fuente.2", sans-serif;
+    padding: 1%;
+}
+footer a:hover{
+    background-color: rgb(159, 159, 159);
+    color: black;
+    border-radius: 1%;
+    padding: 1%;
+    transition: color 0.3s, border-color 0.3s; 
+}
