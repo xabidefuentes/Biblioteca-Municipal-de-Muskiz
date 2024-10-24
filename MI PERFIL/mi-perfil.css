@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Fuente.2';
+    src: url('fonts/Notably Absent DEMO.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Fuente';
+    src: url('fonts/MADE TOMMY Regular_PERSONAL USE.otf') format('truetype'); 
+}
+body{
+    background-color: rgb(255, 213, 136);
+    
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(201, 201, 201);
+    padding: 20px;
+}
+.titulo-principal{
+    font-size: 55px;
+    font-family: 'Fuente', sans-serif;
+    text-align: center;
+    padding-top: 2%;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
+.topnav{
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}/*estilos de links dentro de la barra navegacion*/
+.topnav a{
+    float: left;
+    color: aliceblue;
+    text-align: center;
+    padding: 16px 38px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 1%;
+    font-family: "Fuente.2", sans-serif;
+}
+/* cambio de color de los enlaces al pasar el raton encima de ellos*/
+.topnav a:hover{
+    background-color: rgb(159, 159, 159);
+    color: black;
+    transition: color 0.3s, border-color 0.3s; 
+}
+/* agregar un color al enlace activo/ actual*/
+.topnav a.active{
+    background-color: darkgrey;
+    color: white;
+    }
+
+    .logo-biblioteca{
+        width: 140px;
+        height: auto;
+        margin: 0 60px;
+        max-width: fit-content;
+        filter: drop-shadow(
+            0 0 10px rgba(0,0,0,.4)
+        )
+    }
+    .logo-ayuntamiento{
+        width: 100px;
+        height: auto;
+        margin: 0 60px;
+        border-radius: 4%;
+        max-width: fit-content;
+        filter: drop-shadow(
+            0 0 10px rgba(0,0,0,.4)
+        )
+    }
+
+    .formulario{
+        margin-left:37% ;
+        width: 400px;
+    }
+
+    form{   
+        /*centrar el formulario*/
+        width: 400px;
+        padding: 30px;
+        text-align: center;
+    }
+.formulario h2{
+    text-align: center;
+}
+input,
+textarea{
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+}
+.biblioteca{
+    width: 50%;
+    position: relative;
+    height: auto;
+    margin-left: 37%;
+}
