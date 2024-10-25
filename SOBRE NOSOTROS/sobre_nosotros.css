@@ -14,7 +14,7 @@ header h1{
 header img{
     width: 50px;
     border: 5px;
-    border-radius: 20px;
+    border-radius: 5%;
 }
 .Barra{
     background-color: black;
