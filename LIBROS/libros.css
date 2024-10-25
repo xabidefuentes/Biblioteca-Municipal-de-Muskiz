@@ -101,31 +101,34 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
-.img{
-    border-radius: 5%;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+.menu-libros{
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.textofoto{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 36px;
-    font-family: "Fuente", sans-serif;
-    background-color: rgb(0, 0, 0, .7);
-    padding: 16px;
+    display: flex;
+    justify-content: center;
+}/*estilos de links dentro de la barra navegacion*/
+.menu-libros a{
+    float: left;
+    color: aliceblue;
     text-align: center;
+    padding: 16px 38px;
+    text-decoration: none;
+    font-size: 17px;
     border-radius: 1%;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )
+    font-family: "Fuente.2", sans-serif;
 }
-
+/* cambio de color de los enlaces al pasar el raton encima de ellos*/
+.menu-libros a:hover{
+    background-color: rgb(159, 159, 159);
+    color: black;
+    transition: color 0.3s, border-color 0.3s; 
+}
+/* agregar un color al enlace activo/ actual*/
+.menu-libros a.active{
+    background-color: darkgrey;
+    color: white;
+}
 .titulo-articulo{
     border: 5px solid rgb(0, 0, 0);
     background-color: lightcoral;
