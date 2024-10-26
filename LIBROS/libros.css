@@ -101,33 +101,34 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
-.menu-libros{
-    background-color: rgb(0, 0, 0);
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-}/*estilos de links dentro de la barra navegacion*/
-.menu-libros a{
-    float: left;
-    color: aliceblue;
-    text-align: center;
-    padding: 16px 38px;
+.menu-libros {
+    width: 200px;
+    font-family: Arial, sans-serif;
+    display: flex; /* Utiliza flexbox para alinear horizontalmente */
+    flex-wrap: wrap
+}
+.menu-libros a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
-    font-size: 17px;
-    border-radius: 1%;
-    font-family: "Fuente.2", sans-serif;
+    color: #333;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    margin: 2px 0;
+    margin-right: 20px;
 }
-/* cambio de color de los enlaces al pasar el raton encima de ellos*/
-.menu-libros a:hover{
-    background-color: rgb(159, 159, 159);
-    color: black;
-    transition: color 0.3s, border-color 0.3s; 
+.menu-vertical {
+    display: none;
+    padding-left: 20px;
+    position: absolute;
+    background-color: #f0f0f0;
+    z-index: 1;
 }
-/* agregar un color al enlace activo/ actual*/
-.menu-libros a.active{
-    background-color: darkgrey;
-    color: white;
+.menu-libros a:hover {
+    background-color: #ddd;
+}
+.menu-libros a:hover + .menu-vertical {
+    display: block;
 }
 .titulo-articulo{
     border: 5px solid rgb(0, 0, 0);
