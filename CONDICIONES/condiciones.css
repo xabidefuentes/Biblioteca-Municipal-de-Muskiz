@@ -104,3 +104,18 @@ body{
 .texto{
     margin: 5%;
 }
+.lista{
+    margin: 5%;
+}
+.normas{
+    border: 5px solid rgb(0, 0, 0);
+    background-color: lightcoral;
+    text-align: center;
+    font-size: 26px;
+    width: 80%;  
+    font-family: "Fuente", sans-serif;
+    margin: auto; 
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
