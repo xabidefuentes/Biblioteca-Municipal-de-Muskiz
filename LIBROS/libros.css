@@ -249,6 +249,7 @@ footer a{
     color: rgb(255, 255, 255);
     font-family: "Fuente.2", sans-serif;
     padding: 1%;
+    font-size: 22px;
 }
 footer a:hover{
     background-color: rgb(159, 159, 159);
