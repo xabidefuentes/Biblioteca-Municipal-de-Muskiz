@@ -101,12 +101,43 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
-table, th{
+table, th:hover{
     border: 1px solid black;
 }
 th{
-    float: inline-start;
+    float: inline-end;
     margin: 10px;
     width: 150px;
     background-color: rgb(247, 210, 164);
+}
+.flecha-arriba{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )/* SOMBRA EN PNG*/  
+}
+footer {
+    bottom: 0;       
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+footer a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: "Fuente.2", sans-serif;
+    padding: 1%;
+}
+footer a:hover{
+    background-color: rgb(159, 159, 159);
+    color: black;
+    border-radius: 1%;
+    padding: 1%;
+    transition: color 0.3s, border-color 0.3s; 
 }
