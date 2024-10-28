@@ -101,25 +101,32 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
-.menu-libros{
-    background-color: rgb(0, 0, 0);
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.menu-libros {
     display: flex;
+    position: relative;
+    margin-left: 0%;
     justify-content: center;
-}/*estilos de links dentro de la barra navegacion*/
-.menu-libros a{
-    float: left;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-libros a {
+    margin-right: 20px;
+    text-decoration: none;
+    position: relative; 
     color: aliceblue;
     text-align: center;
     padding: 16px 38px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 22px;
     border-radius: 1%;
     font-family: "Fuente.2", sans-serif;
+    margin: 0 15px;
+    border: 1px black
 }
-/* cambio de color de los enlaces al pasar el raton encima de ellos*/
 .menu-libros a:hover{
+    position: relative;
     background-color: rgb(159, 159, 159);
     color: black;
     transition: color 0.3s, border-color 0.3s; 
@@ -129,6 +136,42 @@ body{
     background-color: darkgrey;
     color: white;
 }
+
+.menu-libros > div {
+    position: relative; 
+    margin:1%;
+}
+.menu-vertical {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0); 
+    z-index: 1;
+    top: 145%;
+    left: 0%;
+    margin-left: 6%;
+    width: 87%;
+}
+.menu-vertical a {
+    display: block; 
+    padding: 10px; 
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 1%;
+    font-family: "Fuente.2", sans-serif;
+    margin: 0%;
+}
+
+.menu-libros > div:hover .menu-vertical {
+    display: block;
+}
+
+.menu-libros a:hover + .menu-vertical, .menu-vertical:hover {
+    display: block;
+    color: black;
+    transition: color 0.3s, border-color 0.3s; 
+    color: white;
+}
+
 .titulo-articulo{
     border: 5px solid rgb(0, 0, 0);
     background-color: lightcoral;
