@@ -113,8 +113,8 @@ body{
 }
 .lista{
     width: 80%;  
-    margin-left: 20%;
-    margin-right: 20%;
+    padding-left: 40%;
+    padding-right: 20%;
     margin: auto;
     font-family: "Fuente", sans-serif;
     background-color: #f0f0f0;
