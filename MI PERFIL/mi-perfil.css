@@ -112,6 +112,7 @@ body{
         width: 400px;
         background-color:#f0f0f0;
         border-radius: 5%;
+
     }
 
     form{   
@@ -122,6 +123,7 @@ body{
         font-size: 23px;
         font-family: "fuente.1";
         font-weight: bold ;
+        border-radius: 20px;
         
     }
     /*titulo formulario*/
@@ -129,8 +131,7 @@ body{
     text-align: center;
     font-size: 30px;
     text-decoration: underline;
-    font-family: "fuente.1"
-    
+    font-family: "fuente.1";
 }
 input,
 textarea{
@@ -180,5 +181,8 @@ footer a:hover{
 }
 .boton{
     font-family: "fuente.1";
+padding: 5px;
+background-color: paleturquoise;
+border-radius: 10px;
 }
 
