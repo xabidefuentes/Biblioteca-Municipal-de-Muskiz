@@ -101,6 +101,11 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
+article iframe{
+border: 3px solid black;
+margin: 10px;
+
+}
 table, th:hover{
     border: 1px solid black;
 }
