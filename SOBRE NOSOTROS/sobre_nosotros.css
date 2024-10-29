@@ -101,6 +101,13 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
+article{
+    border:5px solid rgb(179, 141, 35);
+    text-align: center;
+}
+td{
+    font-size: 5%;
+}
 article iframe{
 border: 3px solid black;
 margin: 50px;
@@ -109,7 +116,8 @@ max-width: 90%;
 
 }
 table, th:hover{
-    border: 1px solid black;
+    border: 3px solid rgb(179, 136, 56);
+    width: 180px;
 }
 table{
     width: 100%;
@@ -119,6 +127,7 @@ th{
     float: inline;
     margin: 20px;
     width: 150px;
+    height: 200px;
     background-color: rgb(247, 210, 164);
 }
 .flecha-arriba{
