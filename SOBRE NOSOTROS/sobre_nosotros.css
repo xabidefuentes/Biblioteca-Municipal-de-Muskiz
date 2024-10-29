@@ -102,39 +102,41 @@ body{
     )
 }
 article{
-    border:5px solid rgb(179, 141, 35);
+    font-family: "Fuente", sans-serif;
+    border:5px solid rgb(255, 213, 136);
     text-align: center;
-    margin: 5%;
+    margin: 2%;
+    background-color: rgb(255, 213, 136);
 }
 article p{
     margin: 10px;
-    border: 3px solid rgb(179, 141, 35);
-    background-color: rgb(247, 210, 164);
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     font-size: 20px;
+    padding: 1.5%;
 }
-article iframe{
+iframe{
     border: 3px solid black;
-    margin: 50px;
-    width: 1400px;
-    max-width: 90%;
+    margin-left: 25%;
 }
 th:hover{
-    border: 3px solid rgb(179, 136, 56);
+    border: 3px solid rgb(0, 0, 0);
     width: 160px;
     margin: auto;
-    border-radius: 5%;
 }
 table{
-    width: 90%;
-    border: 5px solid rgb(179, 141, 35);
+    width: 100%;
+    border: 5px solid rgb(0, 0, 0);
     float: none;
     margin: auto;
+    font-family: "Fuente", sans-serif;
+    margin-bottom: 2%;
 }
 th{
     float: none;
-    width: 150px;
-    height: 200px;
-    background-color: rgb(247, 210, 164);
+    width: 160px;
+    height: 180px;
+    background-color: rgb(255, 255, 255);
 }
 .flecha-arriba{
     position: fixed;
@@ -148,7 +150,7 @@ th{
 footer {
     bottom: 0;       
     left: 0;
-    width: 90%;
+    width: 70%;
     text-align: center;
     background-color: rgb(0, 0, 0);
     padding: 1%;
@@ -160,6 +162,7 @@ footer a{
     color: rgb(255, 255, 255);
     font-family: "Fuente.2", sans-serif;
     padding: 1%;
+    font-size: 22px;
 }
 footer a:hover{
     background-color: rgb(159, 159, 159);
