@@ -101,37 +101,18 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
-.texto{
-    width: 80%;  
-    margin-left: 40%;
-    margin-right: 40%;
-    margin: auto;
-    font-family: "Fuente", sans-serif;
-    background-color: #f0f0f0;
+.container {
+    max-width: 900px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.lista{
-    width: 80%;  
-    padding-left: 40%;
-    padding-right: 20%;
-    margin: auto;
-    font-family: "Fuente", sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.normas{
-    border: 5px solid rgb(0, 0, 0);
-    background-color: lightcoral;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: center;
+    position: relative;
+    margin-left: 20%;
+    justify-content: space-between;
+    font-family: 'Fuente', sans-serif;
+    font-size: 36px;
     text-align: center;
-    font-size: 25px;
-    width: 80%;  
-    font-family: "Fuente", sans-serif;
-    margin: auto; 
-    background-color: #f0f0f0;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .flecha-arriba{
     position: fixed;
@@ -140,13 +121,13 @@ body{
     width: 70px;
     filter: drop-shadow(
         0 0 10px rgba(0,0,0,.4)
-    )
+    )/* SOMBRA EN PNG*/
     
 }
 footer {
     bottom: 0;       
     left: 0;
-    width: 80%;
+    width: 70%;
     text-align: center;
     background-color: rgb(0, 0, 0);
     padding: 1%;
@@ -157,7 +138,7 @@ footer a{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: "Fuente.2", sans-serif;
-    padding: 16px 38px;
+    padding: 1%;
     font-size: 22px;
 }
 footer a:hover{
@@ -166,7 +147,4 @@ footer a:hover{
     border-radius: 1%;
     padding: 1%;
     transition: color 0.3s, border-color 0.3s; 
-    padding: 12px 38px;
 }
-
-
