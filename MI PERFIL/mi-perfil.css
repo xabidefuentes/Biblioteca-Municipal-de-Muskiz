@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 @font-face {
+    font-family:'Fuente.1';
+    src: url(/fonts/PTSansCaption-Bold.ttf) format('truetype');
+}
+@font-face {
     font-family: 'Fuente.2';
     src: url('/fonts/Notably\ Absent\ DEMO.ttf') format('truetype'); 
 }
@@ -12,6 +16,7 @@
     font-family: 'Fuente';
     src: url('/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
 }
+   
 body{
     background-color: rgb(255, 213, 136);
     
@@ -24,7 +29,7 @@ body{
     padding: 20px;
 }
 .titulo-principal{
-    font-size: 55px;
+    font-size: 60px;
     font-family: 'Fuente', sans-serif;
     text-align: center;
     padding-top: 2%;
@@ -114,8 +119,8 @@ body{
         width: 400px;
         padding: 30px;
         text-align: center;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
+        font-size: 23px;
+        font-family: "fuente.1";
         font-weight: bold ;
         
     }
@@ -124,7 +129,7 @@ body{
     text-align: center;
     font-size: 30px;
     text-decoration: underline;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "fuente.1"
     
 }
 input,
@@ -139,21 +144,31 @@ textarea{
     height: auto;
     margin-left: 36%;
 }
+.flecha-arriba{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
 footer {
-  
-    width: 100%;
+    bottom: 0;       
+    left: 0;
+    width: 80%;
     text-align: center;
     background-color: rgb(0, 0, 0);
-    margin-left: 50px;
-    margin-right: 50px;
+    padding: 1%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   margin: auto;
 }
 footer a{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: "Fuente.2", sans-serif;
-    padding: 1%;
- 
+    padding: 16px 38px;
+    font-size: 22px;
 }
 footer a:hover{
     background-color: rgb(159, 159, 159);
@@ -161,4 +176,9 @@ footer a:hover{
     border-radius: 1%;
     padding: 1%;
     transition: color 0.3s, border-color 0.3s; 
+    padding: 12px 38px;
 }
+.boton{
+    font-family: "fuente.1";
+}
+
