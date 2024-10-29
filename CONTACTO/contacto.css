@@ -101,7 +101,7 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
-.contacto {
+.contacto{
     display: flex;
     flex-direction: column;
 }
@@ -113,14 +113,160 @@ body{
     margin: center;
     position: relative;
     margin-left: 22.5%;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    font-family: 'Fuente', sans-serif;
+    
 }
 .container > h2{
-    font-size: 45px;
+    font-size: 38px;
     text-align: center;
+}
+.info-contacto{
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 22.5%;
+    text-decoration: none;* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+    --primary-color: rgb(255, 213, 136);
+    --secondary-color: rgb(201, 201, 201);
+    --text-color: aliceblue;
+    --font-family: 'Fuente', sans-serif;
+}
+
+@font-face {
+    font-family: 'Fuente.2';
+    src: url('/fonts/Notably Absent DEMO.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Fuente';
+    src: url('/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.titulo-principal{
+    font-size: 60px;
+    font-family: var(--font-family);
+    text-align: center;
+    padding-top: 2%;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
+
+.topnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu{
+    margin-left: 12%;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center
+}
+
+.topnav a{
+    color: var(--text-color);
+    text-align: center;
+    padding: 16px 38px;
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 1%;
+    font-family: "Fuente.2", sans-serif;
+    margin: 0 15px;
+}
+
+.topnav a:hover{
+    background-color: rgb(159, 159, 159);
+    color: black;
+    transition: color 0.3s, border-color 0.3s; 
+}
+
+.topnav a.active{
+    background-color: darkgrey;
+    color: white;
+}
+
+.perfil{
+    margin-left: auto;
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.logo-usuario {
+    width: 33px;
+    margin-left: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-biblioteca{
+    width: 140px;
+    height: auto;
+    margin: 0 60px;
+    max-width: fit-content;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
+
+.logo-ayuntamiento{
+    width: 100px;
+    height: auto;
+    margin: 0 60px;
+    border-radius: 4%;
+    max-width: fit-content;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: center;
+    position: relative;
+    margin-left: 22.5%;
+    justify-content: space-between;
+}
+
+.container > h2{
+    font-size: 38px;
+    text-align: center;
 }
 
 .info-contacto{
@@ -132,12 +278,99 @@ body{
     margin-left: 22.5%;
     text-decoration: none;
 }
+
 .info-contacto,a{
     text-decoration: none;
     color: black;
 }
-.info-contacto p {
-    margin: 8px 0;
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.formulario {
+        width: 300px; 
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+}
+
+.formulario input[type="text"], .formulario input[type="email"], .formulario textarea {
+        width: 100%;
+        padding: 10px; 
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: var(--font-family);
+}
+
+.formulario button {
+        background-color: #3c3c3c;
+        color: white; 
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer; 
+        width: 100%; 
+        font-family: var(--font-family);
+}
+
+.formulario button:hover {
+        background-color: #9e9e9e;
+}
+
+.mapa {
+    position: relative;
+    border: 5px solid #000000;
+    border-radius: 1%;
+}
+
+.flecha-arriba{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    )/* SOMBRA EN PNG*/
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    margin: auto;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: "Fuente.2", sans-serif;
+    padding: 16px 38px;
+    font-size: 22px;
+}
+
+footer a:hover{
+    background-color: rgb(159, 159, 159);
+    color: black;
+    border-radius: 1%;
+    padding: 1%;
+    transition: color 0.3s, border-color 0.3s; 
+    padding: 8px 38px;
+}
+}
+.info-contacto,a{
+    text-decoration: none;
+    color: black;
 }
 .icon {
     display: inline-block;
@@ -146,32 +379,44 @@ body{
     margin-right: 10px;
     vertical-align: middle;
 }
+
 .formulario {
-    margin-bottom: 35px;
-    text-align: center;
-    
+        width: 300px; 
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
 }
-.formulario input, .formulario textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+.formulario input[type="text"], .formulario input[type="email"], .formulario textarea {
+        width: 100%;
+        padding: 10px; 
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: 'Fuente', sans-serif;
 }
-.formulario textarea {
-    resize: vertical;
-    height: 100px;
-}
+
 .formulario button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+        background-color: #3c3c3c;
+        color: white; 
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer; 
+        width: 100%; 
+        font-family: 'Fuente', sans-serif;
+}
+
+.formulario button:hover {
+        background-color: #9e9e9e;
 }
 .mapa {
-    margin-top: 20px;
-    border: 1px solid #ccc;
+    position: relative;
+    border: 5px solid #000000;
+    border-radius: 1%;
 }
 .flecha-arriba{
     position: fixed;
@@ -188,6 +433,8 @@ footer{
     background-color: rgb(0, 0, 0);
     padding: 1%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    margin: auto;
 }
 footer a{
     text-decoration: none;
