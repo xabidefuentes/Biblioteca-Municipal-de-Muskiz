@@ -101,6 +101,10 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
+.contacto {
+    display: flex;
+    flex-direction: column;
+}
 .container {
     max-width: 800px;
     padding: 20px;
@@ -109,12 +113,16 @@ body{
     margin: center;
     position: relative;
     margin-left: 22.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .container > h2{
     font-size: 45px;
     text-align: center;
 
 }
+
 .info-contacto{
     display: inline-block;
     vertical-align: top;
@@ -123,6 +131,10 @@ body{
     text-align: center;
     margin-left: 22.5%;
     text-decoration: none;
+}
+.info-contacto,a{
+    text-decoration: none;
+    color: black;
 }
 .info-contacto p {
     margin: 8px 0;
