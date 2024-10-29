@@ -103,15 +103,21 @@ body{
 }
 article iframe{
 border: 3px solid black;
-margin: 10px;
+margin: 50px;
+width: 1400px;
+max-width: 90%;
 
 }
 table, th:hover{
     border: 1px solid black;
 }
+table{
+    width: 100%;
+    border: 5px solid rgb(179, 141, 35);
+}
 th{
-    float: inline-end;
-    margin: 10px;
+    float: inline;
+    margin: 20px;
     width: 150px;
     background-color: rgb(247, 210, 164);
 }
@@ -127,11 +133,12 @@ th{
 footer {
     bottom: 0;       
     left: 0;
-    width: 100%;
+    width: 90%;
     text-align: center;
     background-color: rgb(0, 0, 0);
     padding: 1%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: auto;
 }
 footer a{
     text-decoration: none;
