@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 @font-face {
-    font-family:'Fuente.1';
-    src: url(/fonts/PTSansCaption-Bold.ttf) format('truetype');
-}
-@font-face {
     font-family: 'Fuente.2';
     src: url('/fonts/Notably\ Absent\ DEMO.ttf') format('truetype'); 
 }
@@ -16,7 +12,6 @@
     font-family: 'Fuente';
     src: url('/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
 }
-   
 body{
     background-color: rgb(255, 213, 136);
     
@@ -29,7 +24,7 @@ body{
     padding: 20px;
 }
 .titulo-principal{
-    font-size: 60px;
+    font-size: 55px;
     font-family: 'Fuente', sans-serif;
     text-align: center;
     padding-top: 2%;
@@ -112,7 +107,6 @@ body{
         width: 400px;
         background-color:#f0f0f0;
         border-radius: 5%;
-
     }
 
     form{   
@@ -120,10 +114,9 @@ body{
         width: 400px;
         padding: 30px;
         text-align: center;
-        font-size: 23px;
-        font-family: "fuente.1";
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
         font-weight: bold ;
-        border-radius: 20px;
         
     }
     /*titulo formulario*/
@@ -131,7 +124,8 @@ body{
     text-align: center;
     font-size: 30px;
     text-decoration: underline;
-    font-family: "fuente.1";
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 input,
 textarea{
@@ -145,31 +139,21 @@ textarea{
     height: auto;
     margin-left: 36%;
 }
-.flecha-arriba{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 70px;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )
-}
 footer {
-    bottom: 0;       
-    left: 0;
-    width: 80%;
+  
+    width: 100%;
     text-align: center;
     background-color: rgb(0, 0, 0);
-    padding: 1%;
+    margin-left: 50px;
+    margin-right: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-   margin: auto;
 }
 footer a{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: "Fuente.2", sans-serif;
-    padding: 16px 38px;
-    font-size: 22px;
+    padding: 1%;
+ 
 }
 footer a:hover{
     background-color: rgb(159, 159, 159);
@@ -177,12 +161,4 @@ footer a:hover{
     border-radius: 1%;
     padding: 1%;
     transition: color 0.3s, border-color 0.3s; 
-    padding: 12px 38px;
 }
-.boton{
-    font-family: "fuente.1";
-padding: 5px;
-background-color: paleturquoise;
-border-radius: 10px;
-}
-

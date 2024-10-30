@@ -202,8 +202,7 @@ footer a{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: "Fuente.2", sans-serif;
-    padding: 16px 38px;
-    font-size: 22px;
+    padding: 1%;
 }
 footer a:hover{
     background-color: rgb(159, 159, 159);
@@ -211,5 +210,4 @@ footer a:hover{
     border-radius: 1%;
     padding: 1%;
     transition: color 0.3s, border-color 0.3s; 
-    padding: 12px 38px;
 }
