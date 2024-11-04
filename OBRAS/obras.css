@@ -32,7 +32,6 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
-
 .topnav{
     display: flex;
     justify-content: center;
@@ -113,6 +112,20 @@ body{
     font-family: 'Fuente', sans-serif;
     font-size: 36px;
     text-align: center;
+}
+.cuadrado{
+    border-color: black;
+    padding: 1%;
+    color: black;
+    background-color: rgb(175, 175, 175);
+    width: 40%;
+    margin: auto;
+}
+.cuadrado a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-family: 'Fuente', sans-serif;
 }
 .flecha-arriba{
     position: fixed;
