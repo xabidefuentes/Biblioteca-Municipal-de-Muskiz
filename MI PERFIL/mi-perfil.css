@@ -26,16 +26,17 @@ body{
     align-items: center;
     justify-content: center;
     background-color: rgb(201, 201, 201);
-    padding: 20px;
+    padding: 1px;
 }
 .titulo-principal{
-    font-size: 60px;
+    font-size: 45px;
     font-family: 'Fuente', sans-serif;
     text-align: center;
     padding-top: 2%;
     filter: drop-shadow(
         0 0 10px rgba(0,0,0,.4)
-    )
+    );
+    margin-bottom: 1.5%;
 }
 .topnav{
     display: flex;
@@ -43,18 +44,20 @@ body{
     align-items: center;
     background-color: rgb(0, 0, 0);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0;
 }
 .menu{
     margin-left: 12%;
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    align-items: center
+    align-items: center;
+    
 }
 .topnav a{
     color: aliceblue;
     text-align: center;
-    padding: 16px 38px;
+    padding: 12px 38px;
     text-decoration: none;
     font-size: 22px;
     border-radius: 1%;
@@ -88,7 +91,7 @@ body{
 }
 
     .logo-biblioteca{
-        width: 140px;
+        width: 120px;
         height: auto;
         margin: 0 60px;
         max-width: fit-content;
@@ -107,105 +110,9 @@ body{
         )
     }
 
-    .formulario{
-        margin-left:37% ;
-        width: 400px;
-        background-color:#f0f0f0;
-        border-radius: 5%;
+    
 
-    }
 
-    form{   
-        /*centrar el formulario*/
-        width: 400px;
-        padding: 30px;
-        text-align: center;
-        font-size: 23px;
-        font-family: "fuente.1";
-        font-weight: bold ;
-        border-radius: 20px;
-        
-    }
-    /*titulo formulario*/
-.formulario h2{
-    text-align: center;
-    font-size: 30px;
-    text-decoration: underline;
-    font-family: "fuente.1";
-}
-input,
-textarea{
-    font: 1em sans-serif;
-    width: 300px;
-    box-sizing: border-box;
-}
-.biblioteca{
-    width: 50%;
-    position: relative;
-    height: auto;
-    margin-left: 36%;
-}
-.flecha-arriba{
-    position: fixed;
-    left : 1420px;
-    bottom: 15px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(20, 20, 20);
-    border: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    overflow: hidden;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )/* SOMBRA EN PNG*/  
-}
-  .svgIcon {
-    width: 12px;
-    transition-duration: 0.3s;
-  }
-  
-  .svgIcon path {
-    fill: white;
-  }
-  
-  .flecha-arriba:hover {
-    width: 140px;
-    left: 1370px;
-    border-radius: 50px;
-    transition-duration: 0.3s;
-    background-color: rgb(0, 0, 0);
-    align-items: center;
-  }
-  
-  .flecha-arriba:hover .svgIcon {
-    /* width: 20px; */
-    transition-duration: 0.3s;
-    transform: translateY(-200%);
-  }
-  
-  .flecha-arriba::before {
-    position: absolute;
-    bottom: -20px;
-    content: "VUELVE ARRIBA";
-    font-family: 'Fuente', sans-serif;
-    color: white;
-    /* transition-duration: .3s; */
-    font-size: 0px;
-  }
-  
-  .flecha-arriba:hover::before {
-    font-size: 13px;
-    opacity: 1;
-    bottom: unset;
-    /* transform: translateY(-30px); */
-    transition-duration: 0.3s;
-  }
 footer {
     bottom: 0;       
     left: 0;
@@ -238,3 +145,132 @@ background-color: paleturquoise;
 border-radius: 10px;
 }
 
+
+
+.formulario {
+    font-family: 'Fuente', sans-serif;
+    margin: auto;
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 40px 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+      0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+      0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 11px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 1%;
+  }
+  
+  .logo_container {
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    border-radius: 11px;
+  }
+  
+  .title_container {
+    font-family: 'Fuente', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #212121;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    max-width: 80%;
+    text-align: center;
+    font-style:oblique;
+    line-height: 1.1rem;
+    color: #8B8E98
+  }
+  
+  .input_container {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .icon {
+    width: 20px;
+    position: absolute;
+    z-index: 99;
+    left: 12px;
+    bottom: 9px;
+  }
+  
+  .input_label {
+    font-size: 0.75rem;
+    color: #8B8E98;
+    font-weight: 600;
+  }
+  
+  .input_field {
+    width: auto;
+    height: 40px;
+    padding: 0 0 0 40px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    filter: drop-shadow(0px 1px 0px #efefef)
+      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #242424;
+    background-color: transparent;
+  }
+  
+  .sign-in_btn {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    background: #115DFC;
+    border-radius: 7px;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  
+  .separator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    color: #8B8E98;
+  }
+  
+  .separator .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #e8e8e8;
+  }
+  
+  .note {
+    font-size: 0.75rem;
+    color: #8B8E98;
+    text-decoration: underline;
+  }
