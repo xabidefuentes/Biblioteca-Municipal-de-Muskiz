@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-<<<<<<< HEAD
 @font-face {
     font-family: 'Fuente.2';
     src: url('/fonts/Notably Absent DEMO.ttf') format('truetype'); 
@@ -15,6 +14,7 @@
 }
 body{
     background-color: rgb(255, 213, 136);
+    font-family: 'Fuente', sans-serif;
     
 }
 .header {
@@ -135,14 +135,12 @@ body{
     box-sizing: border-box;
 }
 
-=======
 :root {
     --primary-color: rgb(255, 213, 136);
     --secondary-color: rgb(201, 201, 201);
     --text-color: aliceblue;
     --font-family: 'Fuente', sans-serif;
 }
->>>>>>> f24c22d7082b483a0239e0185ee10c9b6750d992
 
 @font-face {
     font-family: 'Fuente.2';
@@ -281,7 +279,6 @@ body{
     margin-left: 22.5%;
     text-decoration: none;
 }
-<<<<<<< HEAD
 
 .info-contacto,a{
     text-decoration: none;
@@ -356,8 +353,6 @@ footer a:hover{
     padding: 8px 38px;
 }
 }
-=======
->>>>>>> f24c22d7082b483a0239e0185ee10c9b6750d992
 .info-contacto,a{
     text-decoration: none;
     color: black;
@@ -420,7 +415,6 @@ footer a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
     cursor: pointer;
     transition-duration: 0.3s;
     overflow: hidden;
@@ -443,7 +437,7 @@ footer a:hover{
     left: 1340px;
     border-radius: 50px;
     transition-duration: 0.3s;
-    background-color: rgb(150, 100, 35);
+    background-color: rgb(0, 0, 0);
     align-items: center;
   }
   
