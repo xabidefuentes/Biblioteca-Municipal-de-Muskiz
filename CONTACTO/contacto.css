@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 @font-face {
     font-family: 'Fuente.2';
     src: url('/fonts/Notably Absent DEMO.ttf') format('truetype'); 
@@ -134,6 +135,14 @@ body{
     box-sizing: border-box;
 }
 
+=======
+:root {
+    --primary-color: rgb(255, 213, 136);
+    --secondary-color: rgb(201, 201, 201);
+    --text-color: aliceblue;
+    --font-family: 'Fuente', sans-serif;
+}
+>>>>>>> f24c22d7082b483a0239e0185ee10c9b6750d992
 
 @font-face {
     font-family: 'Fuente.2';
@@ -272,6 +281,7 @@ body{
     margin-left: 22.5%;
     text-decoration: none;
 }
+<<<<<<< HEAD
 
 .info-contacto,a{
     text-decoration: none;
@@ -346,6 +356,8 @@ footer a:hover{
     padding: 8px 38px;
 }
 }
+=======
+>>>>>>> f24c22d7082b483a0239e0185ee10c9b6750d992
 .info-contacto,a{
     text-decoration: none;
     color: black;
@@ -397,15 +409,67 @@ footer a:hover{
     border-radius: 1%;
 }
 .flecha-arriba{
+    left : 1390px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 70px;
     filter: drop-shadow(
         0 0 10px rgba(0,0,0,.4)
-    )/* SOMBRA EN PNG*/
-    
+    )/* SOMBRA EN PNG*/  
 }
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .flecha-arriba:hover {
+    width: 140px;
+    left: 1340px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(150, 100, 35);
+    align-items: center;
+  }
+  
+  .flecha-arriba:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  
+  .flecha-arriba::before {
+    position: absolute;
+    bottom: -20px;
+    content: "VUELVE ARRIBA";
+    font-family: 'Fuente', sans-serif;
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  
+  .flecha-arriba:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
 footer{
     text-align: center;
     background-color: rgb(0, 0, 0);
