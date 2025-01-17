@@ -44,7 +44,8 @@ body{
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    align-items: center
+    align-items: center;
+    transition: 5s;
 }
 .topnav a{
     color: aliceblue;
@@ -205,6 +206,11 @@ table {
     padding: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
+.articulo{
+    display: grid;
+    grid-template-columns: auto auto;
+}
   
   td, th {
     border: 1px solid #000000;
@@ -224,16 +230,130 @@ th{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     
 }
+
+.card {
+    width: 300px;
+    height: 200px;
+    margin-left: 18%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card img {
+    width: 64px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card:hover img {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+  }
+
 .flecha-arriba{
+    left : 1410px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 70px;
     filter: drop-shadow(
         0 0 10px rgba(0,0,0,.4)
-    )/* SOMBRA EN PNG*/
-    
+    )/* SOMBRA EN PNG*/  
 }
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .flecha-arriba:hover {
+    width: 140px;
+    left: 1360px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+  }
+  
+  .flecha-arriba:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  
+  .flecha-arriba::before {
+    position: absolute;
+    bottom: -20px;
+    content: "VUELVE ARRIBA";
+    font-family: 'Fuente', sans-serif;
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  
+  .flecha-arriba:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
 footer {
     bottom: 0;       
     left: 0;
