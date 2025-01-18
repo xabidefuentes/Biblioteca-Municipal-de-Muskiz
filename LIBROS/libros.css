@@ -210,15 +210,21 @@ table {
 .articulo{
     display: grid;
     grid-template-columns: auto auto;
+    align-items: center;
 }
   
-  td, th {
+  td{
     border: 1px solid #000000;
     text-align: center;
-    height: 250px;
-    padding: 20%;
+    margin-left: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 150%;
+    padding: 5%;
+    height: auto;
     display: grid;
     grid-template-columns: auto auto auto auto;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
   
 th{
