@@ -225,8 +225,8 @@ th{
 }
   
 .flip-card-back {
-    background-color: #2980b9;
-    color: white;
+    background-color: beige;
+    color: black;
     transform: rotateY(180deg);
 }
 .flecha-arriba{
