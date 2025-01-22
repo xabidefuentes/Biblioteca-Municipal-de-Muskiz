@@ -16,14 +16,14 @@
     <meta name="keywords" content="libros, muskiz, biblioteca">
     <title>Biblioteca Municipal de Muskiz</title> <!--Titulo-->
     <link rel="stylesheet" href="panel.css">
-    <link rel="icon" href="./Imagenes/Logo_Biblioteca-removebg-preview.png" type="image/x-icon">
+    <link rel="icon" href="/Imagenes/Logo_Biblioteca-removebg-preview.png" type="image/x-icon">
     <div id="top"></div>
   </head>
   <header class="header">
     <!--Logos-->
-    <img class="logo-biblioteca" src="./Imagenes/Logo_Biblioteca-removebg-preview.png" alt="logo-biblioteca" >
+    <img class="logo-biblioteca" src="/Imagenes/Logo_Biblioteca-removebg-preview.png" alt="logo-biblioteca" >
     <h1 class="titulo-principal">Biblioteca Municipal de Muskiz</h1>
-    <img class="logo-ayuntamiento" src="./Imagenes/logo-ayuntamiento.jpg" alt="logo-ayuntamiento" ><br><br><br><br><br>
+    <img class="logo-ayuntamiento" src="/Imagenes/logo-ayuntamiento.jpg" alt="logo-ayuntamiento" ><br><br><br><br><br>
   </header>
   <body>
     <div class="topnav">

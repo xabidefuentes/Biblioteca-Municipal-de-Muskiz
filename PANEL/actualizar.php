@@ -4,6 +4,7 @@
     $prestamos = "SELECT * FROM prestamos WHERE id = '$id'";
 ?>
 
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -37,42 +38,44 @@
           <img src="/Imagenes/usuario-blanco.png" alt="usuario" class="logo-usuario">
         </a>
     </div>
-    <div class="titulo-panel">PANEL DE CONTROL</div>
     <div class="container">
+        <h1 class="titulo-panel">PANEL DE CONTROL</h1>
         <div class="form-contacto">
-        <h2>REGISTRAR PRESTAMO</h2>
             <form action="insertar.php" method="post" class="formulario">
-                <label for="" class="textos">DNI</label>
-                <input type="text" name="dni" placeholder="Introduce el DNI"><br><br>
+                <div class="form1">
+                    <label for="" class="textos">DNI</label>
+                    <input type="text" name="dni" placeholder="Introduce el DNI"><br><br>
 
-                <label for="" class="textos">Nombre</label>
-                <input type="text" name="nombre" placeholder="Introduce el nombre"><br><br>
+                    <label for="" class="textos">Nombre</label>
+                    <input type="text" name="nombre" placeholder="Introduce el nombre"><br><br>
 
-                <label for="" class="textos">Apellidos</label>
-                <input type="text" name="apellidos" placeholder="Introduce los apellidos"><br><br>
+                    <label for="" class="textos">Apellidos</label>
+                    <input type="text" name="apellidos" placeholder="Introduce los apellidos"><br><br>
 
-                <label for="" class="textos">Teléfono</label>
-                <input type="text" name="tlf" placeholder="Introduce un teléfono valido"><br><br>
+                    <label for="" class="textos">Teléfono</label>
+                    <input type="text" name="tlf" placeholder="Introduce un teléfono valido"><br><br>
 
-                <label for="" class="textos">Email</label>
-                <input type="email" name="email" placeholder="Introduce un email valido"><br><br>
+                    <label for="" class="textos">Email</label>
+                    <input type="email" name="email" placeholder="Introduce un email valido"><br><br>
+                </div>
+                <div class="form2">
+                    <label for="" class="textos">Titulo del libro</label>
+                    <input type="text" name="titulo_libro" placeholder="Introduce el titulo del libro"><br><br>
 
-                <label for="" class="textos">Titulo del libro</label>
-                <input type="text" name="titulo_libro" placeholder="Introduce el titulo del libro"><br><br>
+                    <label for="" class="textos">Fecha del prestamo</label>
+                    <input type="date" name="fecha_prestamo" placeholder="Introduce la fecha de inicio del prestamo"><br><br>
 
-                <label for="" class="textos">Fecha del prestamo</label>
-                <input type="date" name="fecha_prestamo" placeholder="Introduce la fecha de inicio del prestamo"><br><br>
+                    <label for="" class="textos">Fecha devolución</label>
+                    <input type="date" name="fecha_devolucion" placeholder="Introduce la fecha de devolución"><br><br>
 
-                <label for="" class="textos">Fecha devolución</label>
-                <input type="date" name="fecha_devolucion" placeholder="Introduce la fecha de devolución"><br><br>
-
-                <label for="" class="textos">Penalización</label>
-                <input type="checkbox" name="penalizacion"  value="true" placeholder="Marca la casilla si el usuario esta penalizado"><br><br>
-
-                <button type="submit">REGISTRAR</button>
+                    <label for="" class="textos">Penalización</label>
+                    <input type="checkbox" name="penalizacion"  value="true" placeholder="Marca la casilla si el usuario esta penalizado"><br><br>
+                    <button type="submit">REGISTRAR</button>
+                </div>
             </form>
         </div>
-        <form action="procesar_actualizar.php" method="post" class="tabla">
+    </div>
+    <form action="procesar_actualizar.php" method="post" class="tabla">
           <table class="tabla">
           <tr>
             <th>DNI</th>
@@ -85,7 +88,7 @@
             <th>FECHA DEVOLUCION</th>
             <th>PENALIZACION</th>
           </tr>
-    
+  
           <?php $resultado = mysqli_query($conexion, $prestamos);
             while($row=mysqli_fetch_assoc($resultado)) { ?>
               <tr>
@@ -104,17 +107,16 @@
               <?php } mysqli_free_result($resultado);?>
           </table>
         </form>
-      </div>
       </section>
       <a class="flecha-arriba" href="#top">
         <svg class="svgIcon" viewBox="0 0 384 512">
           <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
         </svg>
       </a>
-    <br>
+    </div>
     <footer>
       <!--El footer incluye estos tres links para redirigir al usuario a sus respectivas pestañas.-->
-        <p><a href="avisoLegal.pdf">Aviso Legal</a> <a href="/CONTACTO/contacto.html">Contacto</a> <a href="PoliticaPrivacidad.pdf">Política de Privacidad</a></p>
+        <p><a href="/INICIO/avisoLegal.pdf">Aviso Legal</a> <a href="/CONTACTO/contacto.html">Contacto</a> <a href="/INICIO/PoliticaPrivacidad.pdf">Política de Privacidad</a></p>
     </footer>
   </body>
 </html>
