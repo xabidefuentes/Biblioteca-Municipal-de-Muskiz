@@ -4,14 +4,19 @@
     box-sizing: border-box;
 }
 @font-face {
+    font-family:'Fuente.1';
+    src: url(/fonts/PTSansCaption-Bold.ttf) format('truetype');
+}
+@font-face {
     font-family: 'Fuente.2';
-    src: url('/fonts/Notably Absent DEMO.ttf') format('truetype'); 
+    src: url('/fonts/Notably\ Absent\ DEMO.ttf') format('truetype'); 
 }
 
 @font-face {
     font-family: 'Fuente';
     src: url('/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
 }
+   
 body{
     background-color: rgb(255, 213, 136);
     
@@ -21,41 +26,46 @@ body{
     align-items: center;
     justify-content: center;
     background-color: rgb(201, 201, 201);
-    padding: 1.5rem;
+    padding: 1px;
+
 }
 .titulo-principal{
-    font-size: 2.5rem;
+    font-size: 45px;
     font-family: 'Fuente', sans-serif;
     text-align: center;
     padding-top: 2%;
     filter: drop-shadow(
         0 0 10px rgba(0,0,0,.4)
-    )
+    );
+    margin-bottom: 1.5%;
 }
-
 .topnav{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    
 }
 .menu{
     margin-left: 12%;
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    align-items: center
+    align-items: center;
+    
 }
 .topnav a{
     color: aliceblue;
     text-align: center;
-    padding: 1rem 2.375rem;
+    padding: 12px 38px;
     text-decoration: none;
-    font-size: 1.375rem;
+    font-size: 22px;
     border-radius: 1%;
     font-family: "Fuente.2", sans-serif;
-    margin: 0 0.9375rem;
+    margin: 0 15px;
+    
 }
 /* cambio de color de los enlaces al pasar el raton encima de ellos*/
 .topnav a:hover{
@@ -75,31 +85,29 @@ body{
     display: flex;
     align-items: center;
     padding: 0;
+    
 }
 .logo-usuario {
-    width: 2.0625rem;
+    width: 33px;
     margin-left: auto;
     padding: 0;
     margin: 0;
 }
-.logo-biblioteca{
-    width: 8.75rem;
-    height: auto;
-    margin: 0 3.75rem;
-    max-width: fit-content;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )
-    display: flex;  
-    flex-direction: row;
-    animation: loadtwo 2.5s ease-in-out infinite;
-    
+
+    .logo-biblioteca{
+        width: 120px;
+        height: auto;
+        margin: 0 60px;
+        max-width: fit-content;
+        filter: drop-shadow(
+            0 0 10px rgba(0,0,0,.4)
+        )
+        display: flex;  
+    flex-direction: row; 
   }
-  @keyframes loadtwo {
-    50% {
-      transform: rotate(-80deg);
-    }
-}
+ 
+
+ 
 .logo-ayuntamiento{
     width: 6.25rem;
     height: auto;
@@ -110,30 +118,7 @@ body{
         0 0 10px rgba(0,0,0,.4)
     )
 }
-.img{
-    border-radius: 5%;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.textofoto{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2.25rem;
-    font-family: "Fuente", sans-serif;
-    background-color: rgb(0, 0, 0, .7);
-    padding: 1rem;
-    text-align: center;
-    border-radius: 1%;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )
-}
+
 
 .titulo-articulo{
     border: 5px solid rgb(0, 0, 0);
@@ -305,7 +290,7 @@ footer {
     width: 100%;
     text-align: center;
     background-color: rgb(0, 0, 0);
-    padding: 12%;
+    padding: 1%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 footer a{
@@ -333,15 +318,24 @@ footer a:hover{
 
 
 /* Estilo básico para el Slider*/
+.container-galleria {
+    width: 100%;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.0));
+ }
 #gallery {
-    width: 80%;
+    margin-top: 0;
+    width: 65%;
     margin: auto;
     overflow: hidden;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.6)
+    );
+    z-index: 10;
  }
  
  .gallery-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s ease-in-out;
  }
  
  .gallery-item {
@@ -359,18 +353,37 @@ footer a:hover{
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: -50px;
+    top:-350px;
  }
  
  .nav-button {
-    background-color: #008CBA;
-    color: white;
+    width: 20%;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.6)
+    )
  }
- 
-.nav-button:hover {
-    background-color: #005f5f;
+ .gallery-navigation , button {
+    background-color: transparent;
+ }
+ .textofoto{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.25rem;
+    font-family: "Fuente", sans-serif;
+    background-color: rgb(0, 0, 0, .7);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1%;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.4)
+    );
+    z-index: 0;
 }
+

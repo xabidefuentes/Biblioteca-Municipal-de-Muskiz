@@ -1,115 +1,124 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 @font-face {
-    font-family: 'Fuente.2';
-    src: url('/fonts/Notably Absent DEMO.ttf') format('truetype'); 
+  font-family:'Fuente.1';
+  src: url(/fonts/PTSansCaption-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fuente.2';
+  src: url('/fonts/Notably\ Absent\ DEMO.ttf') format('truetype'); 
 }
 
 @font-face {
-    font-family: 'Fuente';
-    src: url('/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
+  font-family: 'Fuente';
+  src: url('/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
 }
+ 
 body{
-    background-color: rgb(255, 213, 136);
-    
+  background-color: rgb(255, 213, 136);
+  
 }
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(201, 201, 201);
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(201, 201, 201);
+  padding: 1px;
 }
 .titulo-principal{
-    font-size: 60px;
-    font-family: 'Fuente', sans-serif;
-    text-align: center;
-    padding-top: 2%;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )
+  font-size: 45px;
+  font-family: 'Fuente', sans-serif;
+  text-align: center;
+  padding-top: 2%;
+  filter: drop-shadow(
+      0 0 10px rgba(0,0,0,.4)
+  );
+  margin-bottom: 1.5%;
 }
 .topnav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0;
 }
 .menu{
-    margin-left: 12%;
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    align-items: center;
-    transition: 5s;
+  margin-left: 12%;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+  
 }
 .topnav a{
-    color: aliceblue;
-    text-align: center;
-    padding: 16px 38px;
-    text-decoration: none;
-    font-size: 22px;
-    border-radius: 1%;
-    font-family: "Fuente.2", sans-serif;
-    margin: 0 15px;
+  color: aliceblue;
+  text-align: center;
+  padding: 12px 38px;
+  text-decoration: none;
+  font-size: 22px;
+  border-radius: 1%;
+  font-family: "Fuente.2", sans-serif;
+  margin: 0 15px;
 }
 /* cambio de color de los enlaces al pasar el raton encima de ellos*/
 .topnav a:hover{
-    background-color: rgb(159, 159, 159);
-    color: black;
-    transition: color 0.3s, border-color 0.3s; 
+  background-color: rgb(159, 159, 159);
+  color: black;
+  transition: color 0.3s, border-color 0.3s; 
 }
 /* agregar un color al enlace activo/ actual*/
 .topnav a.active{
-    background-color: darkgrey;
-    color: white;
+  background-color: darkgrey;
+  color: white;
 }
 .perfil{
-    margin-left: auto;
-    color: aliceblue;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 0;
+  margin-left: auto;
+  color: aliceblue;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 .logo-usuario {
-    width: 33px;
-    margin-left: auto;
-    padding: 0;
-    margin: 0;
+  width: 33px;
+  margin-left: auto;
+  padding: 0;
+  margin: 0;
 }
-.logo-biblioteca{
-    width: 140px;
-    height: auto;
-    margin: 0 60px;
-    max-width: fit-content;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )
-    display: flex;  
-    flex-direction: row;
-    animation: loadtwo 2.5s ease-in-out infinite;
-    
+
+  .logo-biblioteca{
+      width: 120px;
+      height: auto;
+      margin: 0 60px;
+      max-width: fit-content;
+      filter: drop-shadow(
+          0 0 10px rgba(0,0,0,.4)
+      )
+      display: flex;  
+  flex-direction: row;
+  animation: loadtwo 2.5s ease-in-out infinite;
+  
+}
+@keyframes loadtwo {
+  50% {
+    transform: rotate(-80deg);
   }
-  @keyframes loadtwo {
-    50% {
-      transform: rotate(-80deg);
-    }
-}
-.logo-ayuntamiento{
-    width: 100px;
-    height: auto;
-    margin: 0 60px;
-    border-radius: 4%;
-    max-width: fit-content;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )
-}
+  }
+  .logo-ayuntamiento{
+      width: 100px;
+      height: auto;
+      margin: 0 60px;
+      border-radius: 4%;
+      max-width: fit-content;
+      filter: drop-shadow(
+          0 0 10px rgba(0,0,0,.4)
+      )
+  }
+
 .menu-libros {
     display: flex;
     position: relative;

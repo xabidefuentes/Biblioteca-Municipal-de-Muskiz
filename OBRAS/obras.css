@@ -4,14 +4,19 @@
     box-sizing: border-box;
 }
 @font-face {
+    font-family:'Fuente.1';
+    src: url(/fonts/PTSansCaption-Bold.ttf) format('truetype');
+}
+@font-face {
     font-family: 'Fuente.2';
-    src: url('/fonts/Notably Absent DEMO.ttf') format('truetype'); 
+    src: url('/fonts/Notably\ Absent\ DEMO.ttf') format('truetype'); 
 }
 
 @font-face {
     font-family: 'Fuente';
     src: url('/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
 }
+   
 body{
     background-color: rgb(255, 213, 136);
     
@@ -21,16 +26,17 @@ body{
     align-items: center;
     justify-content: center;
     background-color: rgb(201, 201, 201);
-    padding: 20px;
+    padding: 1px;
 }
 .titulo-principal{
-    font-size: 60px;
+    font-size: 45px;
     font-family: 'Fuente', sans-serif;
     text-align: center;
     padding-top: 2%;
     filter: drop-shadow(
         0 0 10px rgba(0,0,0,.4)
-    )
+    );
+    margin-bottom: 1.5%;
 }
 .topnav{
     display: flex;
@@ -38,18 +44,20 @@ body{
     align-items: center;
     background-color: rgb(0, 0, 0);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0;
 }
 .menu{
     margin-left: 12%;
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    align-items: center
+    align-items: center;
+    
 }
 .topnav a{
     color: aliceblue;
     text-align: center;
-    padding: 16px 38px;
+    padding: 12px 38px;
     text-decoration: none;
     font-size: 22px;
     border-radius: 1%;
@@ -81,25 +89,36 @@ body{
     padding: 0;
     margin: 0;
 }
-.logo-biblioteca{
-    width: 140px;
-    height: auto;
-    margin: 0 60px;
-    max-width: fit-content;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )
-}
-.logo-ayuntamiento{
-    width: 100px;
-    height: auto;
-    margin: 0 60px;
-    border-radius: 4%;
-    max-width: fit-content;
-    filter: drop-shadow(
-        0 0 10px rgba(0,0,0,.4)
-    )
-}
+
+    .logo-biblioteca{
+        width: 120px;
+        height: auto;
+        margin: 0 60px;
+        max-width: fit-content;
+        filter: drop-shadow(
+            0 0 10px rgba(0,0,0,.4)
+        )
+        display: flex;  
+    flex-direction: row;
+    animation: loadtwo 2.5s ease-in-out infinite;
+    
+  }
+  @keyframes loadtwo {
+    50% {
+      transform: rotate(-80deg);
+    }
+    }
+    .logo-ayuntamiento{
+        width: 100px;
+        height: auto;
+        margin: 0 60px;
+        border-radius: 4%;
+        max-width: fit-content;
+        filter: drop-shadow(
+            0 0 10px rgba(0,0,0,.4)
+        )
+    }
+
 .container {
     max-width: 900px;
     padding: 20px;
