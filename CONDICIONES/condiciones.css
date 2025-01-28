@@ -19,6 +19,7 @@
    
 body{
     background-color: rgb(255, 213, 136);
+    font-family: 'Fuente', sans-serif;
     
 }
 .header {
@@ -134,22 +135,21 @@ body{
 }
 .container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,3fr);
     padding: 10px;
     width: 100%;
     margin: auto;
 }
 .container > div {
-    background-color: beige;
+    background-color: rgb(201, 201, 201);
     border: 1px solid black;
-    padding: 5px;
+    padding: 16px;
     font-size: 30px;
     text-align: center;
     margin:5%;
-    cursor: pointer;
     transition: 400ms;
-    height: 150px;
-    border-radius: 10px;
+    height: 80%;
+    border-radius: 5px;
 }
 .caja:hover {
     transform: scale(1.1, 1.1);
@@ -162,14 +162,42 @@ body{
     font-size: 18px;
 
 }
+.caja-baja {
+    background-color: rgb(201, 201, 201);
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: 400ms;
+    height: 150px;
+    border-radius: 5px;
+    width: 29.5%;
+    margin: auto;
+
+}
+.caja-baja:hover {
+    transform: scale(1.1, 1.1);
+  }
+.caja-baja > .tip {
+    font-size: 22px;
+    font-style: italic;
+}
+.caja-baja > .second-text{
+    font-size: 18px;
+
+}
 h2:hover{
     color: red;
+    transition: 0.4s;
 }
 h3:hover{
     color: red;
+    transition: 0.4s;
 }
 h4:hover{
     color: red;
+    transition: 0.4s;
 }
 .fotosalida{
   display: block;
@@ -184,13 +212,13 @@ h4:hover{
     background-color: lightcoral;
     text-align: center;
     text-decoration: underline;
-    font-size: 25px;
+    font-size: 35px;
     width: 80%;  
     font-family: "Fuente", sans-serif;
     margin: auto; 
     background-color: #f0f0f0;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 .normas{
     border: 5px solid rgb(0, 0, 0);
