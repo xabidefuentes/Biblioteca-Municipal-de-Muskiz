@@ -5,16 +5,16 @@
 }
 @font-face {
     font-family:'Fuente.1';
-    src: url(/fonts/PTSansCaption-Bold.ttf) format('truetype');
+    src: url('../fonts/PTSansCaption-Bold.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Fuente.2';
-    src: url('/fonts/Notably\ Absent\ DEMO.ttf') format('truetype'); 
+    src: url('../fonts/Notably\ Absent\ DEMO.ttf') format('truetype'); 
 }
 
 @font-face {
     font-family: 'Fuente';
-    src: url('/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
+    src: url('../fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
 }
    
 body{
@@ -54,6 +54,9 @@ body{
     justify-content: center;
     flex-grow: 1;
     align-items: center;
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.6)
+    )
     
 }
 .topnav a{
@@ -94,16 +97,16 @@ body{
     margin: 0;
 }
 
-    .logo-biblioteca{
-        width: 120px;
-        height: auto;
-        margin: 0 60px;
-        max-width: fit-content;
-        filter: drop-shadow(
-            0 0 10px rgba(0,0,0,.4)
-        )
-        display: flex;  
+.logo-biblioteca{
+    width: 120px;
+    height: auto;
+    margin: 0 60px;
+    max-width: fit-content;
+    display: flex;  
     flex-direction: row; 
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0,.6)
+    )
   }
  
 
@@ -320,7 +323,6 @@ footer a:hover{
 /* Estilo básico para el Slider*/
 .container-galleria {
     width: 100%;
-    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.0));
  }
 #gallery {
     margin-top: 0;
