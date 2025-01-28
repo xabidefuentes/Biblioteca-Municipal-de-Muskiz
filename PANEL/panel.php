@@ -99,8 +99,8 @@
                 <td><?php echo $row['fecha_prestamo']; ?></td>
                 <td><?php echo $row['fecha_devolucion']; ?></td>
                 <td><?php echo $row['penalizacion'] ? 'SI' : 'NO'; ?></td>
-                <td class="actualizar"><a href="actualizar.php?id=<?php echo $row['id']; ?>"><p>EDITAR</p></a></td>   
-                <td class="eliminar"><a href="procesar_eliminar.php?id=<?php echo $row["id"]; ?>"><p>ELIMINAR</p></a></td>
+                <td class="actualizar"><a href="../panel/actualizar.php?id=<?php echo $row['id']; ?>"><p>EDITAR</p></a></td>   
+                <td class="eliminar"><a href="../panel/procesar_eliminar.php?id=<?php echo $row["id"]; ?>"><p>ELIMINAR</p></a></td>
               </tr>
               <?php } mysqli_free_result($resultado);?>
           </table>
@@ -113,7 +113,7 @@
     </div>
     <footer>
       <!--El footer incluye estos tres links para redirigir al usuario a sus respectivas pestañas.-->
-        <p><a href="avisoLegal.pdf">Aviso Legal</a> <a href="/CONTACTO/contacto.html">Contacto</a> <a href="PoliticaPrivacidad.pdf">Política de Privacidad</a></p>
+        <p><a href="../inicio/avisoLegal.pdf">Aviso Legal</a> <a href="/CONTACTO/contacto.html">Contacto</a> <a href="../inicio/PoliticaPrivacidad.pdf">Política de Privacidad</a></p>
     </footer>
   </body>
 </html>

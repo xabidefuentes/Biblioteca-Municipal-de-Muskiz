@@ -16,26 +16,26 @@
     <meta name="keywords" content="libros, muskiz, biblioteca">
     <title>Biblioteca Municipal de Muskiz</title> <!--Titulo-->
     <link rel="stylesheet" href="panel.css">
-    <link rel="icon" href="/Imagenes/Logo_Biblioteca-removebg-preview.png" type="image/x-icon">
+    <link rel="icon" href="../Imagenes/Logo_Biblioteca-removebg-preview.png" type="image/x-icon">
     <div id="top"></div>
   </head>
   <header class="header">
     <!--Logos-->
-    <img class="logo-biblioteca" src="/Imagenes/Logo_Biblioteca-removebg-preview.png" alt="logo-biblioteca" >
+    <img class="logo-biblioteca" src="../Imagenes/Logo_Biblioteca-removebg-preview.png" alt="logo-biblioteca" >
     <h1 class="titulo-principal">Biblioteca Municipal de Muskiz</h1>
-    <img class="logo-ayuntamiento" src="/Imagenes/logo-ayuntamiento.jpg" alt="logo-ayuntamiento" ><br><br><br><br><br>
+    <img class="logo-ayuntamiento" src="../Imagenes/logo-ayuntamiento.jpg" alt="logo-ayuntamiento" ><br><br><br><br><br>
   </header>
   <body>
     <div class="topnav">
       <!--Este es el menú del encabezado, para acceder a las distintas pestañas.-->
         <div class="menu">
-        <a href="/INICIO/index.html">INICIO</a>
-        <a href="/LIBROS/libros.html">LIBROS</a>
-        <a href="/CONDICIONES/condiciones.html">CONDICIONES</a>
-        <a href="/SOBRE NOSOTROS/sobre_nosotros.html">SOBRE NOSOTROS</a>
+        <a href="../INICIO/index.html">INICIO</a>
+        <a href="../LIBROS/libros.html">LIBROS</a>
+        <a href="../CONDICIONES/condiciones.html">CONDICIONES</a>
+        <a href="../SOBRE NOSOTROS/sobre_nosotros.html">SOBRE NOSOTROS</a>
         </div>
-        <a href="/MI PERFIL/mi-perfil.html" class="perfil">
-          <img src="/Imagenes/usuario-blanco.png" alt="usuario" class="logo-usuario">
+        <a href="../MI PERFIL/mi-perfil.html" class="perfil">
+          <img src="../Imagenes/usuario-blanco.png" alt="usuario" class="logo-usuario">
         </a>
     </div>
     <div class="container">
@@ -116,7 +116,7 @@
     </div>
     <footer>
       <!--El footer incluye estos tres links para redirigir al usuario a sus respectivas pestañas.-->
-        <p><a href="/INICIO/avisoLegal.pdf">Aviso Legal</a> <a href="/CONTACTO/contacto.html">Contacto</a> <a href="/INICIO/PoliticaPrivacidad.pdf">Política de Privacidad</a></p>
+        <p><a href="../INICIO/avisoLegal.pdf">Aviso Legal</a> <a href="../CONTACTO/contacto.html">Contacto</a> <a href="../INICIO/PoliticaPrivacidad.pdf">Política de Privacidad</a></p>
     </footer>
   </body>
 </html>

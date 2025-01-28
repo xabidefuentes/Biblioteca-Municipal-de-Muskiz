@@ -5,16 +5,16 @@
 }
 @font-face {
     font-family:'Fuente.1';
-    src: url(/fonts/PTSansCaption-Bold.ttf) format('truetype');
+    src: url('../fonts/PTSansCaption-Bold.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Fuente.2';
-    src: url('/fonts/Notably\ Absent\ DEMO.ttf') format('truetype'); 
+    src: url('../fonts/Notably\ Absent\ DEMO.ttf') format('truetype'); 
 }
 
 @font-face {
     font-family: 'Fuente';
-    src: url('/fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
+    src: url('../fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf') format('truetype'); 
 }
    
 body{
@@ -97,7 +97,7 @@ body{
         max-width: fit-content;
         filter: drop-shadow(
             0 0 10px rgba(0,0,0,.4)
-        )
+        );
         display: flex;  
     flex-direction: row;
     animation: loadtwo 2.5s ease-in-out infinite;
