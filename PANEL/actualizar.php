@@ -15,7 +15,7 @@
     <meta name="PROYECTO/RETO" content="WEB-0"> 
     <meta name="keywords" content="libros, muskiz, biblioteca">
     <title>Biblioteca Municipal de Muskiz</title> <!--Titulo-->
-    <link rel="stylesheet" href="panel.css">
+    <link rel="stylesheet" href="actualizar.css">
     <link rel="icon" href="../Imagenes/Logo_Biblioteca-removebg-preview.png" type="image/x-icon">
     <div id="top"></div>
   </head>

@@ -3,8 +3,6 @@
   $prestamos = "SELECT * FROM prestamos";
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -15,8 +13,8 @@
     <meta name="PROYECTO/RETO" content="WEB-0"> 
     <meta name="keywords" content="libros, muskiz, biblioteca">
     <title>Biblioteca Municipal de Muskiz</title> <!--Titulo-->
-    <link rel="stylesheet" href="panel.css">
-    <link rel="icon" href="/Imagenes/Logo_Biblioteca-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="panell.css">
+    <link rel="icon" href="../Imagenes/Logo_Biblioteca-removebg-preview.png" type="image/x-icon">
     <div id="top"></div>
   </head>
   <header class="header">
@@ -99,8 +97,8 @@
                 <td><?php echo $row['fecha_prestamo']; ?></td>
                 <td><?php echo $row['fecha_devolucion']; ?></td>
                 <td><?php echo $row['penalizacion'] ? 'SI' : 'NO'; ?></td>
-                <td class="actualizar"><a href="../panel/actualizar.php?id=<?php echo $row['id']; ?>"><p>EDITAR</p></a></td>   
-                <td class="eliminar"><a href="../panel/procesar_eliminar.php?id=<?php echo $row["id"]; ?>"><p>ELIMINAR</p></a></td>
+                <td><a href="../panel/actualizar.php?id=<?php echo $row['id']; ?>" class="actualizar"><p>EDITAR</p></a></td>   
+                <td><a href="../panel/procesar_eliminar.php?id=<?php echo $row["id"]; ?>" class="eliminar"><p>ELIMINAR</p></a></td>
               </tr>
               <?php } mysqli_free_result($resultado);?>
           </table>
