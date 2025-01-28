@@ -291,10 +291,7 @@ table {
     color: white;
 }
 
-.tabla td:hover {
-    background-color: #e00000;
-    color: white;
-}
+
 .input {
     padding: 2%;
     width: 100%;

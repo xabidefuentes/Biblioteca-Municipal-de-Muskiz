@@ -15,4 +15,9 @@ $insertar = "INSERT INTO prestamos(dni, nombre, apellidos, tlf, email, titulo_li
 
 $resultado = mysqli_query($conexion, $insertar);
 
+if($resultado) {
+    echo "<script>alert('Registro insertado correctamente'); window.location.href='prestamos.php';</script>";
+} else {
+    echo "<script>alert('Error al insertar el registro'); window.location.href='prestamos.php';</script>";
+}
 ?>

@@ -17,9 +17,10 @@ $actualizar = "UPDATE prestamos SET dni='$dni', nombre='$nombre', apellidos='$ap
 $resultado = mysqli_query($conexion, $actualizar);
 
 if ($resultado) {
-    echo "<script>alert('Los datos se han actualizado correctamente');</script>";
+    echo "<script>alert('Los datos se han actualizado correctamente'); window.location.href='panel.php';</script>";
+
 }else{
-    echo "<script>alert('ERROR: Los datos no se pudieron actualizar');</script>";
+    echo "<script>alert('ERROR: Los datos no se pudieron actualizar');window.location.href='panel.php';</script>";
 }
 
 
