@@ -90,19 +90,16 @@ body{
   margin: 0;
 }
 
-  .logo-biblioteca{
-      width: 120px;
-      height: auto;
-      margin: 0 60px;
-      max-width: fit-content;
-      filter: drop-shadow(
-          0 0 10px rgba(0,0,0,.4)
-      )
-      display: flex;  
-  flex-direction: row;
-  animation: loadtwo 2.5s ease-in-out infinite;
-  
-}
+.logo-biblioteca{
+    width: 120px;
+    height: auto;
+    margin: 0 60px;
+    max-width: fit-content;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.4));
+    display: flex;  
+    flex-direction: row;
+    animation: loadtwo 2.5s ease-in-out infinite;
+  }
 @keyframes loadtwo {
   50% {
     transform: rotate(-80deg);
