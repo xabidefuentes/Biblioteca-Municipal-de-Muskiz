@@ -21,21 +21,21 @@
   </head>
   <header class="header">
     <!--Logos-->
-    <img class="logo-biblioteca" src="/Imagenes/Logo_Biblioteca-removebg-preview.png" alt="logo-biblioteca" >
+    <img class="logo-biblioteca" src="../Imagenes/Logo_Biblioteca-removebg-preview.png" alt="logo-biblioteca" >
     <h1 class="titulo-principal">Biblioteca Municipal de Muskiz</h1>
-    <img class="logo-ayuntamiento" src="/Imagenes/logo-ayuntamiento.jpg" alt="logo-ayuntamiento" ><br><br><br><br><br>
+    <img class="logo-ayuntamiento" src="../Imagenes/logo-ayuntamiento.jpg" alt="logo-ayuntamiento" ><br><br><br><br><br>
   </header>
   <body>
     <div class="topnav">
       <!--Este es el menú del encabezado, para acceder a las distintas pestañas.-->
         <div class="menu">
-        <a href="/INICIO/index.html">INICIO</a>
-        <a href="/LIBROS/libros.html">LIBROS</a>
-        <a href="/CONDICIONES/condiciones.html">CONDICIONES</a>
-        <a href="/SOBRE NOSOTROS/sobre_nosotros.html">SOBRE NOSOTROS</a>
+        <a href="../INICIO/index.html">INICIO</a>
+        <a href="../LIBROS/libros.html">LIBROS</a>
+        <a href="../CONDICIONES/condiciones.html">CONDICIONES</a>
+        <a href="../SOBRE NOSOTROS/sobre_nosotros.html">SOBRE NOSOTROS</a>
         </div>
-        <a href="/MI PERFIL/mi-perfil.html" class="perfil">
-          <img src="/Imagenes/usuario-blanco.png" alt="usuario" class="logo-usuario">
+        <a href="../MI PERFIL/mi-perfil.html" class="perfil">
+          <img src="../Imagenes/usuario-blanco.png" alt="usuario" class="logo-usuario">
         </a>
     </div>
     <div class="container">
