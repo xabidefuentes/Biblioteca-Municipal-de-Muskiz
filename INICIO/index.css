@@ -231,10 +231,12 @@ th{
     font-size: 24px;
     color: #333;
     font-weight: 700;
+    transform: translate3d(0, 0, 0); 
   }
   
   .card:hover img {
     scale: 0;
+    transform: translate3d(0, 0, 0); 
   }
   
   .card__description {
@@ -242,6 +244,8 @@ th{
     font-size: 14px;
     color: #777;
     line-height: 1.4;
+    transform: translate3d(0, 0, 0); 
+
   }
 
 .flecha-arriba{
