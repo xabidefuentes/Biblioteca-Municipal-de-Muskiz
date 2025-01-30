@@ -1,108 +1,98 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const squares = document.querySelectorAll('.grid div')
-  const scoreDisplay = document.querySelector('span')
-  const startBtn = document.querySelector('.start')
+let jugador = {
+    x: 50,
+    y: 50,
+    velocidad:7
+};
 
-  const width = 10
-  let currentIndex = 0
-  let appleIndex = 0
-  let currentSnake = [2,1,0] 
-  let direction = 1
-  let score = 0
-  let speed = 0.9
-  let intervalTime = 0
-  let interval = 0
+let objetivo = {
+    x: Math.floor(Math.random() * 380) + 10,
+    y: Math.floor(Math.random() * 380) + 10,
+    tamaño: 20,
+    velocidadX: 2,
+    velocidadY: 2
+};
 
-  //Para empezar el juego
-  function startGame() {
-    currentSnake.forEach(index => squares[index].classList.remove('snake'))
-    squares[appleIndex].classList.remove('apple')
-    clearInterval(interval)
-    score = 0
-    randomApple()
-    direction = 1
-    scoreDisplay.innerText = score
-    intervalTime = 1000
-    currentSnake = [2,1,0]
-    currentIndex = 0
-    currentSnake.forEach(index => squares[index].classList.add('snake'))
-    interval = setInterval(moveOutcomes, intervalTime)
-  }
+let puntuacion = 0;
 
-  function moveOutcomes() {
-
-    //Si la serpiente choca
-    if (
-      (currentSnake[0] + width >= (width * width) && direction === width ) || //Si choca abajo
-      (currentSnake[0] % width === width -1 && direction === 1) || //Si choca a la derecha
-      (currentSnake[0] % width === 0 && direction === -1) || //Si choca a la izquierda
-      (currentSnake[0] - width < 0 && direction === -width) ||  //Si choca arriba
-      squares[currentSnake[0] + direction].classList.contains('snake') //Si la serpiente se choca consigo mismo
-    ) {
-      return clearInterval(interval) //Esto termina el intervalo si pasa todo lo anterior
+document.addEventListener("DOMContentLoaded", () => {
+    let canvas = document.createElement("canvas");
+    canvas.width = 400;
+    canvas.height = 400;
+    canvas.style.position = 'absolute';
+    canvas.style.left = '37.5%';
+    canvas.style.top = '125%';
+    canvas.style.border = '5px solid black';
+    document.body.appendChild(canvas);
+    let ctx = canvas.getContext("2d");
+    
+    function dibujarJugador() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "blue";
+        ctx.fillRect(jugador.x, jugador.y, 20, 20);
+        ctx.fillStyle = "red";
+        ctx.fillRect(objetivo.x, objetivo.y, objetivo.tamaño, objetivo.tamaño);
+        ctx.fillStyle = "black";
+        ctx.font = "20px Fuente";
+        ctx.fillText(`Puntuación: ${puntuacion}`, 10, 20);
+    }
+    
+    function moverJugador(event) {
+        event.preventDefault(); // Evita el desplazamiento de la página con las flechas
+        switch (event.key) {
+            case "ArrowUp":
+                if (jugador.y > 0) jugador.y -= jugador.velocidad;
+                break;
+            case "ArrowDown":
+                if (jugador.y < canvas.height - 20) jugador.y += jugador.velocidad;
+                break;
+            case "ArrowLeft":
+                if (jugador.x > 0) jugador.x -= jugador.velocidad;
+                break;
+            case "ArrowRight":
+                if (jugador.x < canvas.width - 20) jugador.x += jugador.velocidad;
+                break;
+        }
+        verificarColision();
+        dibujarJugador();
     }
 
-    const tail = currentSnake.pop()
-    squares[tail].classList.remove('snake')
-    currentSnake.unshift(currentSnake[0] + direction)
-
-    //Cuando la serpiente consiga manzanas
-    if(squares[currentSnake[0]].classList.contains('apple')) {
-      squares[currentSnake[0]].classList.remove('apple')
-      squares[tail].classList.add('snake')
-      currentSnake.push(tail)
-      randomApple()
-      score++
-      scoreDisplay.textContent = score
-      clearInterval(interval)
-      intervalTime = intervalTime * speed
-      interval = setInterval(moveOutcomes, intervalTime)
+    function moverObjetivo() {
+        objetivo.x += objetivo.velocidadX;
+        objetivo.y += objetivo.velocidadY;
+        
+        if (objetivo.x <= 0 || objetivo.x >= canvas.width - objetivo.tamaño) {
+            objetivo.velocidadX *= -1;
+        }
+        if (objetivo.y <= 0 || objetivo.y >= canvas.height - objetivo.tamaño) {
+            objetivo.velocidadY *= -1;
+        }
     }
-    squares[currentSnake[0]].classList.add('snake')
-  }
 
-  //Generador de manzanas
-  function randomApple() {
-    do{
-      appleIndex = Math.floor(Math.random() * squares.length)
-    } while(squares[appleIndex].classList.contains('snake')) //Para que la manzana no aparezca sobre la serpiente
-    squares[appleIndex].classList.add('apple')
-  }
-
-  //Asignación de controles al teclado
-  function control(e) {
-    squares[currentIndex].classList.remove('snake')
-
-    if(e.keyCode === 39) {
-      direction = 1 //Botón derecha (div derecha)
-    } else if (e.keyCode === 38) {
-      direction = -width //Botón arriba (10 divs para atrás)
-    } else if (e.keyCode === 37) {
-      direction = -1 //Botón izquierda (div izquierda)
-    } else if (e.keyCode === 40) {
-      direction = +width //Botón abajo (10 divs para adelante)
+    function verificarColision() {
+        if (
+            jugador.x < objetivo.x + objetivo.tamaño &&
+            jugador.x + 20 > objetivo.x &&
+            jugador.y < objetivo.y + objetivo.tamaño &&
+            jugador.y + 20 > objetivo.y
+        ) {
+            puntuacion++;
+            objetivo.x = Math.floor(Math.random() * 380) + 10;
+            objetivo.y = Math.floor(Math.random() * 380) + 10;
+        }
     }
-  }
-
-  document.addEventListener('keyup', control)
-  startBtn.addEventListener('click', startGame)
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    document.addEventListener("keydown", moverJugador);
+    window.addEventListener("keydown", (event) => {
+        if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+            event.preventDefault();
+        }
+    });
+    
+    setInterval(() => {
+        moverObjetivo();
+        dibujarJugador();
+    }, 50);
+    
+    dibujarJugador();
+});
