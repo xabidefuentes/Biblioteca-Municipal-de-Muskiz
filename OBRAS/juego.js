@@ -1,58 +1,92 @@
-let score = 0;
-let gameStarted = false;  // Variable para verificar si el juego ha comenzado
-const bookContainer = document.getElementById('book-container');
-const scoreDisplay = document.getElementById('score');
-const startButton = document.getElementById('start-button');
+document.addEventListener('DOMContentLoaded', () => {
+  const squares = document.querySelectorAll('.grid div')
+  const scoreDisplay = document.querySelector('span')
+  const startBtn = document.querySelector('.start')
 
-// Función para crear y lanzar un libro
-function createBook() {
-  const book = document.createElement('img');
-  book.classList.add('book');
-  
-  // Si tienes una imagen local en tu proyecto:
-  // book.src = 'book_image.png'; 
+  const width = 10
+  let currentIndex = 0
+  let appleIndex = 0
+  let currentSnake = [2,1,0] 
+  let direction = 1
+  let score = 0
+  let speed = 0.9
+  let intervalTime = 0
+  let interval = 0
 
-  // O usa un enlace a una imagen:
-  book.src = 'https://image.shutterstock.com/image-vector/book-icon-simple-line-illustration-260nw-1217257415.jpg'; // Cambia este enlace por el que quieras usar
-
-  // Posición aleatoria en X
-  book.style.left = `${Math.random() * (bookContainer.offsetWidth - 50)}px`; 
-
-  // Empieza fuera de la pantalla
-  book.style.top = '-70px'; 
-  bookContainer.appendChild(book);
-
-  // Animación para que el libro caiga hacia abajo
-  let fallSpeed = Math.random() * 2 + 3;
-  let fallInterval = setInterval(() => {
-    let currentTop = parseFloat(book.style.top);
-    if (currentTop >= bookContainer.offsetHeight) {
-      // Si el libro toca el suelo
-      clearInterval(fallInterval);
-      book.remove(); // Elimina el libro
-    } else {
-      book.style.top = currentTop + fallSpeed + 'px';
-    }
-  }, 20);
-
-  // Evento de clic sobre el libro
-  book.addEventListener('click', () => {
-    score += 10; // Aumenta puntos por atrapar el libro
-    scoreDisplay.textContent = `Puntos: ${score}`;
-    book.remove(); // Elimina el libro atrapado
-  });
-}
-
-// Iniciar el juego al hacer clic en el botón
-startButton.addEventListener('click', () => {
-  if (!gameStarted) {
-    gameStarted = true;
-    startButton.style.display = 'none';  // Ocultar el botón después de hacer clic
-
-    // Crear libros cada 1.5 segundos
-    setInterval(createBook, 1500);
+  //Para empezar el juego
+  function startGame() {
+    currentSnake.forEach(index => squares[index].classList.remove('snake'))
+    squares[appleIndex].classList.remove('apple')
+    clearInterval(interval)
+    score = 0
+    randomApple()
+    direction = 1
+    scoreDisplay.innerText = score
+    intervalTime = 1000
+    currentSnake = [2,1,0]
+    currentIndex = 0
+    currentSnake.forEach(index => squares[index].classList.add('snake'))
+    interval = setInterval(moveOutcomes, intervalTime)
   }
-});
+
+  function moveOutcomes() {
+
+    //Si la serpiente choca
+    if (
+      (currentSnake[0] + width >= (width * width) && direction === width ) || //Si choca abajo
+      (currentSnake[0] % width === width -1 && direction === 1) || //Si choca a la derecha
+      (currentSnake[0] % width === 0 && direction === -1) || //Si choca a la izquierda
+      (currentSnake[0] - width < 0 && direction === -width) ||  //Si choca arriba
+      squares[currentSnake[0] + direction].classList.contains('snake') //Si la serpiente se choca consigo mismo
+    ) {
+      return clearInterval(interval) //Esto termina el intervalo si pasa todo lo anterior
+    }
+
+    const tail = currentSnake.pop()
+    squares[tail].classList.remove('snake')
+    currentSnake.unshift(currentSnake[0] + direction)
+
+    //Cuando la serpiente consiga manzanas
+    if(squares[currentSnake[0]].classList.contains('apple')) {
+      squares[currentSnake[0]].classList.remove('apple')
+      squares[tail].classList.add('snake')
+      currentSnake.push(tail)
+      randomApple()
+      score++
+      scoreDisplay.textContent = score
+      clearInterval(interval)
+      intervalTime = intervalTime * speed
+      interval = setInterval(moveOutcomes, intervalTime)
+    }
+    squares[currentSnake[0]].classList.add('snake')
+  }
+
+  //Generador de manzanas
+  function randomApple() {
+    do{
+      appleIndex = Math.floor(Math.random() * squares.length)
+    } while(squares[appleIndex].classList.contains('snake')) //Para que la manzana no aparezca sobre la serpiente
+    squares[appleIndex].classList.add('apple')
+  }
+
+  //Asignación de controles al teclado
+  function control(e) {
+    squares[currentIndex].classList.remove('snake')
+
+    if(e.keyCode === 39) {
+      direction = 1 //Botón derecha (div derecha)
+    } else if (e.keyCode === 38) {
+      direction = -width //Botón arriba (10 divs para atrás)
+    } else if (e.keyCode === 37) {
+      direction = -1 //Botón izquierda (div izquierda)
+    } else if (e.keyCode === 40) {
+      direction = +width //Botón abajo (10 divs para adelante)
+    }
+  }
+
+  document.addEventListener('keyup', control)
+  startBtn.addEventListener('click', startGame)
+})
 
 
 
